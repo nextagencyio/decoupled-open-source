@@ -1,0 +1,306 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Open source project homepage with hero, stats, featured items, and CTA",
+      "fields": [
+        { "id": "hero_title", "label": "Hero Title", "type": "string" },
+        { "id": "hero_subtitle", "label": "Hero Subtitle", "type": "string" },
+        { "id": "hero_description", "label": "Hero Description", "type": "text" },
+        { "id": "stats_items", "label": "Statistics", "type": "paragraph(stat_item)[]" },
+        { "id": "featured_items_title", "label": "Featured Items Title", "type": "string" },
+        { "id": "cta_title", "label": "CTA Title", "type": "string" },
+        { "id": "cta_description", "label": "CTA Description", "type": "text" },
+        { "id": "cta_primary", "label": "Primary CTA", "type": "string" },
+        { "id": "cta_secondary", "label": "Secondary CTA", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "feature",
+      "label": "Feature",
+      "description": "Key features and capabilities of the open source project",
+      "body": true,
+      "fields": [
+        { "id": "feature_category", "label": "Category", "type": "term(feature_categories)[]" },
+        { "id": "icon_name", "label": "Icon Name", "type": "string" },
+        { "id": "image", "label": "Feature Image", "type": "image" },
+        { "id": "version_added", "label": "Version Added", "type": "string" }
+      ]
+    },
+    {
+      "bundle": "contributor",
+      "label": "Contributor",
+      "description": "Open source project contributors and maintainers",
+      "body": true,
+      "fields": [
+        { "id": "role", "label": "Role", "type": "string" },
+        { "id": "github_username", "label": "GitHub Username", "type": "string" },
+        { "id": "contributions_count", "label": "Contributions", "type": "integer" },
+        { "id": "photo", "label": "Photo", "type": "image" }
+      ]
+    },
+    {
+      "bundle": "release",
+      "label": "Release",
+      "description": "Project releases and changelogs",
+      "body": true,
+      "fields": [
+        { "id": "version_number", "label": "Version Number", "type": "string" },
+        { "id": "release_date", "label": "Release Date", "type": "datetime" },
+        { "id": "release_type", "label": "Release Type", "type": "term(release_types)[]" },
+        { "id": "download_url", "label": "Download URL", "type": "string" },
+        { "id": "is_latest", "label": "Latest Release", "type": "bool" }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "stat_item",
+      "label": "Statistic Item",
+      "description": "A key statistic with number and label",
+      "fields": [
+        { "id": "number", "label": "Number", "type": "string!" },
+        { "id": "label", "label": "Label", "type": "string!" }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "vocabulary": "feature_categories",
+      "label": "Feature Categories",
+      "terms": ["core", "plugins", "integrations", "developer-tools", "performance"]
+    },
+    {
+      "vocabulary": "release_types",
+      "label": "Release Types",
+      "terms": ["major", "minor", "patch", "beta", "release-candidate"]
+    }
+  ],
+  "content": [
+    {
+      "id": "stat-stars",
+      "type": "paragraph.stat_item",
+      "values": { "number": "24K+", "label": "GitHub Stars" }
+    },
+    {
+      "id": "stat-contributors",
+      "type": "paragraph.stat_item",
+      "values": { "number": "850+", "label": "Contributors" }
+    },
+    {
+      "id": "stat-downloads",
+      "type": "paragraph.stat_item",
+      "values": { "number": "2.3M", "label": "Monthly Downloads" }
+    },
+    {
+      "id": "stat-forks",
+      "type": "paragraph.stat_item",
+      "values": { "number": "4,200+", "label": "Forks" }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "Welcome to NovaCMS",
+        "hero_title": "The Open Source CMS for the Modern Web",
+        "hero_subtitle": "Fast. Flexible. Community-Driven.",
+        "hero_description": "<p>NovaCMS is a headless content management system built for developers who demand performance, extensibility, and freedom. Ship faster with a CMS that gets out of your way.</p>",
+        "stats_items": ["@stat-stars", "@stat-contributors", "@stat-downloads", "@stat-forks"],
+        "featured_items_title": "Why NovaCMS?",
+        "cta_title": "Ready to Build Something Great?",
+        "cta_description": "<p>Get started in minutes with our CLI installer, comprehensive documentation, and a thriving community of developers ready to help.</p>",
+        "cta_primary": "Get Started",
+        "cta_secondary": "View on GitHub"
+      }
+    },
+    {
+      "id": "feature-graphql",
+      "type": "node.feature",
+      "path": "/features/graphql-api",
+      "values": {
+        "title": "GraphQL API",
+        "body": "<p>NovaCMS ships with a fully-featured GraphQL API out of the box. Query exactly the data you need with zero over-fetching, complete with real-time subscriptions, batched queries, and automatic schema generation from your content models.</p><h2>Key Capabilities</h2><ul><li>Auto-generated schema from content types</li><li>Real-time subscriptions via WebSockets</li><li>Query complexity analysis and rate limiting</li><li>Built-in playground for schema exploration</li></ul>",
+        "feature_category": ["core"],
+        "icon_name": "api",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+          "alt": "GraphQL API code on a dark terminal"
+        },
+        "version_added": "1.0.0"
+      }
+    },
+    {
+      "id": "feature-plugins",
+      "type": "node.feature",
+      "path": "/features/plugin-system",
+      "values": {
+        "title": "Plugin Architecture",
+        "body": "<p>Extend NovaCMS with a robust plugin system that lets you add custom fields, workflows, and integrations without modifying core code. Over 200 community plugins are available in the marketplace.</p><h2>Plugin Features</h2><ul><li>Hook-based lifecycle events</li><li>Custom field type registration</li><li>Admin UI extensions</li><li>Hot-reloading in development</li></ul>",
+        "feature_category": ["plugins"],
+        "icon_name": "puzzle",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+          "alt": "Circuit board representing modular plugin architecture"
+        },
+        "version_added": "1.2.0"
+      }
+    },
+    {
+      "id": "feature-performance",
+      "type": "node.feature",
+      "path": "/features/edge-caching",
+      "values": {
+        "title": "Edge Caching & CDN",
+        "body": "<p>Built-in edge caching delivers content in under 50ms worldwide. NovaCMS integrates with all major CDN providers and includes intelligent cache invalidation that keeps your content fresh without sacrificing speed.</p><h2>Performance Highlights</h2><ul><li>Sub-50ms global response times</li><li>Automatic cache invalidation on content updates</li><li>Stale-while-revalidate support</li><li>Edge-side includes for partial caching</li></ul>",
+        "feature_category": ["performance"],
+        "icon_name": "bolt",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+          "alt": "Server room with glowing network connections"
+        },
+        "version_added": "2.0.0"
+      }
+    },
+    {
+      "id": "feature-auth",
+      "type": "node.feature",
+      "path": "/features/authentication",
+      "values": {
+        "title": "Flexible Authentication",
+        "body": "<p>Support for OAuth 2.0, API keys, JWT tokens, and custom authentication providers. NovaCMS lets you secure your API however your team prefers, with granular role-based access control.</p><h2>Auth Options</h2><ul><li>OAuth 2.0 with PKCE flow</li><li>JWT with refresh tokens</li><li>API key management</li><li>RBAC with custom roles and permissions</li></ul>",
+        "feature_category": ["core"],
+        "icon_name": "shield",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+          "alt": "Digital security lock concept"
+        },
+        "version_added": "1.0.0"
+      }
+    },
+    {
+      "id": "contributor-elena",
+      "type": "node.contributor",
+      "path": "/contributors/elena-vasquez",
+      "values": {
+        "title": "Elena Vasquez",
+        "body": "<p>Elena is the creator and lead maintainer of NovaCMS. She started the project in 2021 while working as a senior engineer at a digital agency, frustrated by the limitations of existing headless CMS options. Today she works full-time on NovaCMS, supported by the project's sponsors.</p>",
+        "role": "Creator & Lead Maintainer",
+        "github_username": "evasquez",
+        "contributions_count": 1842,
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+          "alt": "Elena Vasquez"
+        }
+      }
+    },
+    {
+      "id": "contributor-kai",
+      "type": "node.contributor",
+      "path": "/contributors/kai-tanaka",
+      "values": {
+        "title": "Kai Tanaka",
+        "body": "<p>Kai maintains the GraphQL engine and API layer of NovaCMS. With a background in distributed systems at major tech companies, Kai brings deep expertise in building high-performance APIs that scale to millions of requests per day.</p>",
+        "role": "Core Maintainer - API",
+        "github_username": "ktanaka",
+        "contributions_count": 967,
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+          "alt": "Kai Tanaka"
+        }
+      }
+    },
+    {
+      "id": "contributor-amara",
+      "type": "node.contributor",
+      "path": "/contributors/amara-osei",
+      "values": {
+        "title": "Amara Osei",
+        "body": "<p>Amara leads the documentation and developer experience efforts for NovaCMS. She has rewritten the project's documentation from scratch, created the interactive tutorial system, and manages the community Discord server with over 8,000 members.</p>",
+        "role": "Core Maintainer - DevEx & Docs",
+        "github_username": "amaraosei",
+        "contributions_count": 534,
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+          "alt": "Amara Osei"
+        }
+      }
+    },
+    {
+      "id": "release-300",
+      "type": "node.release",
+      "path": "/releases/v3-0-0",
+      "values": {
+        "title": "NovaCMS v3.0.0 - Aurora",
+        "body": "<h2>Breaking Changes</h2><ul><li>Minimum Node.js version bumped to 20 LTS</li><li>Legacy REST API removed in favor of GraphQL</li><li>Config file format changed to YAML</li></ul><h2>New Features</h2><ul><li>Real-time collaboration for content editing</li><li>AI-powered content suggestions</li><li>Built-in image optimization pipeline</li><li>Multi-tenant workspace support</li></ul><h2>Improvements</h2><ul><li>50% reduction in cold start time</li><li>Redesigned admin dashboard</li><li>Improved TypeScript type generation</li></ul>",
+        "version_number": "3.0.0",
+        "release_date": "2025-11-15T10:00:00",
+        "release_type": ["major"],
+        "download_url": "https://github.com/novacms/novacms/releases/tag/v3.0.0",
+        "is_latest": true
+      }
+    },
+    {
+      "id": "release-212",
+      "type": "node.release",
+      "path": "/releases/v2-12-0",
+      "values": {
+        "title": "NovaCMS v2.12.0",
+        "body": "<h2>New Features</h2><ul><li>Webhook management UI</li><li>Content scheduling with timezone support</li><li>Bulk import/export via CLI</li></ul><h2>Bug Fixes</h2><ul><li>Fixed memory leak in long-running preview sessions</li><li>Corrected pagination cursor behavior on filtered queries</li><li>Resolved race condition in concurrent content updates</li></ul>",
+        "version_number": "2.12.0",
+        "release_date": "2025-09-20T10:00:00",
+        "release_type": ["minor"],
+        "download_url": "https://github.com/novacms/novacms/releases/tag/v2.12.0",
+        "is_latest": false
+      }
+    },
+    {
+      "id": "release-2113",
+      "type": "node.release",
+      "path": "/releases/v2-11-3",
+      "values": {
+        "title": "NovaCMS v2.11.3",
+        "body": "<h2>Bug Fixes</h2><ul><li>Patched XSS vulnerability in rich text field sanitization</li><li>Fixed Docker image build failure on ARM64 architecture</li><li>Corrected OAuth token refresh timing issue</li></ul><h2>Security</h2><p>This release addresses CVE-2025-12345, a moderate-severity cross-site scripting vulnerability. All users on v2.11.x are encouraged to upgrade immediately.</p>",
+        "version_number": "2.11.3",
+        "release_date": "2025-08-05T10:00:00",
+        "release_type": ["patch"],
+        "download_url": "https://github.com/novacms/novacms/releases/tag/v2.11.3",
+        "is_latest": false
+      }
+    },
+    {
+      "id": "page-about",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About NovaCMS",
+        "body": "<p>NovaCMS is an open source headless content management system licensed under the MIT License. The project was founded in 2021 with a simple goal: build the CMS that developers actually want to use.</p><h2>Our Mission</h2><p>We believe content management should be developer-friendly, blazing fast, and completely free from vendor lock-in. NovaCMS gives teams full ownership of their content infrastructure while providing the developer experience they deserve.</p><h2>Governance</h2><p>NovaCMS is governed by a Technical Steering Committee (TSC) of five elected maintainers. Major architectural decisions are made through an open RFC process, and all discussions happen in public on GitHub.</p><h2>Sponsors</h2><p>NovaCMS is sustained by the generous support of our sponsors, including corporate backers and individual contributors on GitHub Sponsors and Open Collective.</p>"
+      }
+    },
+    {
+      "id": "page-docs",
+      "type": "node.page",
+      "path": "/documentation",
+      "values": {
+        "title": "Documentation",
+        "body": "<h2>Getting Started</h2><p>The fastest way to get started with NovaCMS is our CLI installer. Run the following command to create a new project:</p><p><code>npx create-novacms my-project</code></p><h2>Core Concepts</h2><ul><li><strong>Content Types</strong> - Define your content models with fields, validations, and relationships</li><li><strong>API Layer</strong> - Query content through the auto-generated GraphQL API</li><li><strong>Plugins</strong> - Extend functionality with community or custom plugins</li><li><strong>Webhooks</strong> - Trigger external services on content events</li></ul><h2>Community Resources</h2><ul><li>Discord Server - 8,000+ members</li><li>GitHub Discussions - Q&A and feature requests</li><li>YouTube Channel - Video tutorials and live streams</li></ul>"
+      }
+    },
+    {
+      "id": "page-contributing",
+      "type": "node.page",
+      "path": "/contributing",
+      "values": {
+        "title": "Contributing Guide",
+        "body": "<h2>How to Contribute</h2><p>NovaCMS welcomes contributions from developers of all experience levels. Whether you're fixing a typo in the docs or building a major feature, your help makes the project better for everyone.</p><h2>Types of Contributions</h2><ul><li><strong>Code</strong> - Bug fixes, features, and performance improvements</li><li><strong>Documentation</strong> - Guides, tutorials, and API reference improvements</li><li><strong>Community</strong> - Answering questions, reviewing PRs, and mentoring newcomers</li><li><strong>Design</strong> - UI/UX improvements to the admin dashboard</li></ul><h2>Development Setup</h2><p>Fork the repository, clone your fork, and run <code>npm install</code> followed by <code>npm run dev</code>. The project uses a monorepo structure managed with Turborepo.</p>"
+      }
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "data": {
+    "nodeContributors": {
+      "__typename": "NodeContributorConnection",
+      "nodes": [
+        {
+          "__typename": "NodeContributor",
+          "id": "contributor-elena",
+          "title": "Elena Vasquez",
+          "path": "/contributors/elena-vasquez",
+          "body": {
+            "processed": "<p>Elena is the creator and lead maintainer of NovaCMS. She started the project in 2021 while working as a senior engineer at a digital agency, frustrated by the limitations of existing headless CMS options. Today she works full-time on NovaCMS, supported by the project's sponsors.</p>",
+            "summary": "Elena is the creator and lead maintainer of NovaCMS. She started the project in 2021 while working as a senior engineer at a digital agency, frustrated by the limitations of existing headless CMS opti"
+          },
+          "role": "Creator & Lead Maintainer",
+          "githubUsername": "evasquez",
+          "contributionsCount": 1842,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+            "alt": "Elena Vasquez",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeContributor",
+          "id": "contributor-kai",
+          "title": "Kai Tanaka",
+          "path": "/contributors/kai-tanaka",
+          "body": {
+            "processed": "<p>Kai maintains the GraphQL engine and API layer of NovaCMS. With a background in distributed systems at major tech companies, Kai brings deep expertise in building high-performance APIs that scale to millions of requests per day.</p>",
+            "summary": "Kai maintains the GraphQL engine and API layer of NovaCMS. With a background in distributed systems at major tech companies, Kai brings deep expertise in building high-performance APIs that scale to m"
+          },
+          "role": "Core Maintainer - API",
+          "githubUsername": "ktanaka",
+          "contributionsCount": 967,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+            "alt": "Kai Tanaka",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        },
+        {
+          "__typename": "NodeContributor",
+          "id": "contributor-amara",
+          "title": "Amara Osei",
+          "path": "/contributors/amara-osei",
+          "body": {
+            "processed": "<p>Amara leads the documentation and developer experience efforts for NovaCMS. She has rewritten the project's documentation from scratch, created the interactive tutorial system, and manages the community Discord server with over 8,000 members.</p>",
+            "summary": "Amara leads the documentation and developer experience efforts for NovaCMS. She has rewritten the project's documentation from scratch, created the interactive tutorial system, and manages the communi"
+          },
+          "role": "Core Maintainer - DevEx & Docs",
+          "githubUsername": "amaraosei",
+          "contributionsCount": 534,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+            "alt": "Amara Osei",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

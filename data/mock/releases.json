@@ -1,0 +1,75 @@
+{
+  "data": {
+    "nodeReleases": {
+      "__typename": "NodeReleaseConnection",
+      "nodes": [
+        {
+          "__typename": "NodeRelease",
+          "id": "release-300",
+          "title": "NovaCMS v3.0.0 - Aurora",
+          "path": "/releases/v3-0-0",
+          "body": {
+            "processed": "<h2>Breaking Changes</h2><ul><li>Minimum Node.js version bumped to 20 LTS</li><li>Legacy REST API removed in favor of GraphQL</li><li>Config file format changed to YAML</li></ul><h2>New Features</h2><ul><li>Real-time collaboration for content editing</li><li>AI-powered content suggestions</li><li>Built-in image optimization pipeline</li><li>Multi-tenant workspace support</li></ul><h2>Improvements</h2><ul><li>50% reduction in cold start time</li><li>Redesigned admin dashboard</li><li>Improved TypeScript type generation</li></ul>",
+            "summary": "Breaking ChangesMinimum Node.js version bumped to 20 LTSLegacy REST API removed in favor of GraphQLConfig file format changed to YAMLNew FeaturesReal-time collaboration for content editingAI-powered c"
+          },
+          "versionNumber": "3.0.0",
+          "releaseDate": {
+            "timestamp": 1763222400
+          },
+          "releaseType": [
+            {
+              "id": "major",
+              "name": "major"
+            }
+          ],
+          "downloadUrl": "https://github.com/novacms/novacms/releases/tag/v3.0.0",
+          "isLatest": true
+        },
+        {
+          "__typename": "NodeRelease",
+          "id": "release-212",
+          "title": "NovaCMS v2.12.0",
+          "path": "/releases/v2-12-0",
+          "body": {
+            "processed": "<h2>New Features</h2><ul><li>Webhook management UI</li><li>Content scheduling with timezone support</li><li>Bulk import/export via CLI</li></ul><h2>Bug Fixes</h2><ul><li>Fixed memory leak in long-running preview sessions</li><li>Corrected pagination cursor behavior on filtered queries</li><li>Resolved race condition in concurrent content updates</li></ul>",
+            "summary": "New FeaturesWebhook management UIContent scheduling with timezone supportBulk import/export via CLIBug FixesFixed memory leak in long-running preview sessionsCorrected pagination cursor behavior on fi"
+          },
+          "versionNumber": "2.12.0",
+          "releaseDate": {
+            "timestamp": 1758380400
+          },
+          "releaseType": [
+            {
+              "id": "minor",
+              "name": "minor"
+            }
+          ],
+          "downloadUrl": "https://github.com/novacms/novacms/releases/tag/v2.12.0",
+          "isLatest": false
+        },
+        {
+          "__typename": "NodeRelease",
+          "id": "release-2113",
+          "title": "NovaCMS v2.11.3",
+          "path": "/releases/v2-11-3",
+          "body": {
+            "processed": "<h2>Bug Fixes</h2><ul><li>Patched XSS vulnerability in rich text field sanitization</li><li>Fixed Docker image build failure on ARM64 architecture</li><li>Corrected OAuth token refresh timing issue</li></ul><h2>Security</h2><p>This release addresses CVE-2025-12345, a moderate-severity cross-site scripting vulnerability. All users on v2.11.x are encouraged to upgrade immediately.</p>",
+            "summary": "Bug FixesPatched XSS vulnerability in rich text field sanitizationFixed Docker image build failure on ARM64 architectureCorrected OAuth token refresh timing issueSecurityThis release addresses CVE-202"
+          },
+          "versionNumber": "2.11.3",
+          "releaseDate": {
+            "timestamp": 1754406000
+          },
+          "releaseType": [
+            {
+              "id": "patch",
+              "name": "patch"
+            }
+          ],
+          "downloadUrl": "https://github.com/novacms/novacms/releases/tag/v2.11.3",
+          "isLatest": false
+        }
+      ]
+    }
+  }
+}

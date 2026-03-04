@@ -1,0 +1,59 @@
+{
+  "data": {
+    "nodeHomepages": {
+      "__typename": "NodeHomepageConnection",
+      "nodes": [
+        {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Welcome to NovaCMS",
+          "path": "/homepage",
+          "heroTitle": "The Open Source CMS for the Modern Web",
+          "heroSubtitle": "Fast. Flexible. Community-Driven.",
+          "heroDescription": {
+            "processed": "<p>NovaCMS is a headless content management system built for developers who demand performance, extensibility, and freedom. Ship faster with a CMS that gets out of your way.</p>",
+            "summary": "NovaCMS is a headless content management system built for developers who demand performance, extensibility, and freedom. Ship faster with a CMS that gets out of your way."
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-stars",
+              "title": "",
+              "number": "24K+",
+              "label": "GitHub Stars"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-contributors",
+              "title": "",
+              "number": "850+",
+              "label": "Contributors"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-downloads",
+              "title": "",
+              "number": "2.3M",
+              "label": "Monthly Downloads"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-forks",
+              "title": "",
+              "number": "4,200+",
+              "label": "Forks"
+            }
+          ],
+          "featuredItemsTitle": "Why NovaCMS?",
+          "ctaTitle": "Ready to Build Something Great?",
+          "ctaDescription": {
+            "processed": "<p>Get started in minutes with our CLI installer, comprehensive documentation, and a thriving community of developers ready to help.</p>",
+            "summary": "Get started in minutes with our CLI installer, comprehensive documentation, and a thriving community of developers ready to help."
+          },
+          "ctaPrimary": "Get Started",
+          "ctaSecondary": "View on GitHub"
+        }
+      ]
+    }
+  }
+}

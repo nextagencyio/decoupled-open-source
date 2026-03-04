@@ -1,0 +1,185 @@
+{
+  "data": {
+    "nodeFeatures": {
+      "__typename": "NodeFeatureConnection",
+      "nodes": [
+        {
+          "__typename": "NodeFeature",
+          "id": "feature-graphql",
+          "title": "GraphQL API",
+          "path": "/features/graphql-api",
+          "body": {
+            "processed": "<p>NovaCMS ships with a fully-featured GraphQL API out of the box. Query exactly the data you need with zero over-fetching, complete with real-time subscriptions, batched queries, and automatic schema generation from your content models.</p><h2>Key Capabilities</h2><ul><li>Auto-generated schema from content types</li><li>Real-time subscriptions via WebSockets</li><li>Query complexity analysis and rate limiting</li><li>Built-in playground for schema exploration</li></ul>",
+            "summary": "NovaCMS ships with a fully-featured GraphQL API out of the box. Query exactly the data you need with zero over-fetching, complete with real-time subscriptions, batched queries, and automatic schema ge"
+          },
+          "featureCategory": [
+            {
+              "id": "core",
+              "name": "core"
+            }
+          ],
+          "iconName": "api",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+            "alt": "GraphQL API code on a dark terminal",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "1.0.0"
+        },
+        {
+          "__typename": "NodeFeature",
+          "id": "feature-plugins",
+          "title": "Plugin Architecture",
+          "path": "/features/plugin-system",
+          "body": {
+            "processed": "<p>Extend NovaCMS with a robust plugin system that lets you add custom fields, workflows, and integrations without modifying core code. Over 200 community plugins are available in the marketplace.</p><h2>Plugin Features</h2><ul><li>Hook-based lifecycle events</li><li>Custom field type registration</li><li>Admin UI extensions</li><li>Hot-reloading in development</li></ul>",
+            "summary": "Extend NovaCMS with a robust plugin system that lets you add custom fields, workflows, and integrations without modifying core code. Over 200 community plugins are available in the marketplace.Plugin "
+          },
+          "featureCategory": [
+            {
+              "id": "plugins",
+              "name": "plugins"
+            }
+          ],
+          "iconName": "puzzle",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+            "alt": "Circuit board representing modular plugin architecture",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "1.2.0"
+        },
+        {
+          "__typename": "NodeFeature",
+          "id": "feature-performance",
+          "title": "Edge Caching & CDN",
+          "path": "/features/edge-caching",
+          "body": {
+            "processed": "<p>Built-in edge caching delivers content in under 50ms worldwide. NovaCMS integrates with all major CDN providers and includes intelligent cache invalidation that keeps your content fresh without sacrificing speed.</p><h2>Performance Highlights</h2><ul><li>Sub-50ms global response times</li><li>Automatic cache invalidation on content updates</li><li>Stale-while-revalidate support</li><li>Edge-side includes for partial caching</li></ul>",
+            "summary": "Built-in edge caching delivers content in under 50ms worldwide. NovaCMS integrates with all major CDN providers and includes intelligent cache invalidation that keeps your content fresh without sacrif"
+          },
+          "featureCategory": [
+            {
+              "id": "performance",
+              "name": "performance"
+            }
+          ],
+          "iconName": "bolt",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+            "alt": "Server room with glowing network connections",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "2.0.0"
+        },
+        {
+          "__typename": "NodeFeature",
+          "id": "feature-auth",
+          "title": "Flexible Authentication",
+          "path": "/features/authentication",
+          "body": {
+            "processed": "<p>Support for OAuth 2.0, API keys, JWT tokens, and custom authentication providers. NovaCMS lets you secure your API however your team prefers, with granular role-based access control.</p><h2>Auth Options</h2><ul><li>OAuth 2.0 with PKCE flow</li><li>JWT with refresh tokens</li><li>API key management</li><li>RBAC with custom roles and permissions</li></ul>",
+            "summary": "Support for OAuth 2.0, API keys, JWT tokens, and custom authentication providers. NovaCMS lets you secure your API however your team prefers, with granular role-based access control.Auth OptionsOAuth "
+          },
+          "featureCategory": [
+            {
+              "id": "core",
+              "name": "core"
+            }
+          ],
+          "iconName": "shield",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+            "alt": "Digital security lock concept",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "1.0.0"
+        }
+      ]
+    }
+  }
+}

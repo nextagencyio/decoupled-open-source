@@ -1,0 +1,428 @@
+{
+  "model": [
+    {
+      "bundle": "homepage",
+      "label": "Homepage",
+      "description": "Landing page with hero section, features, and call-to-action areas",
+      "fields": [
+        {
+          "id": "hero_title",
+          "label": "Hero Title",
+          "type": "string",
+          "description": "Main headline in the hero section"
+        },
+        {
+          "id": "hero_subtitle",
+          "label": "Hero Subtitle",
+          "type": "string",
+          "description": "Secondary text below the hero title"
+        },
+        {
+          "id": "hero_description",
+          "label": "Hero Description",
+          "type": "text",
+          "description": "Longer descriptive text for the hero section"
+        },
+        {
+          "id": "features_title",
+          "label": "Features Section Title",
+          "type": "string"
+        },
+        {
+          "id": "features_subtitle",
+          "label": "Features Section Subtitle",
+          "type": "string"
+        },
+        {
+          "id": "features_items",
+          "label": "Feature Items",
+          "type": "paragraph(feature_item)[]",
+          "description": "List of feature highlight blocks"
+        },
+        {
+          "id": "cta_title",
+          "label": "CTA Section Title",
+          "type": "string"
+        },
+        {
+          "id": "cta_description",
+          "label": "CTA Description",
+          "type": "text"
+        },
+        {
+          "id": "cta_primary",
+          "label": "Primary CTA Text",
+          "type": "string"
+        },
+        {
+          "id": "cta_secondary",
+          "label": "Secondary CTA Text",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "bundle": "feature",
+      "label": "Feature",
+      "description": "A software feature or capability of the open source project",
+      "body": true,
+      "fields": [
+        {
+          "id": "image",
+          "label": "Featured Image",
+          "type": "image",
+          "description": "Screenshot or illustration of the feature"
+        }
+      ]
+    },
+    {
+      "bundle": "contributor",
+      "label": "Contributor",
+      "description": "An open source project contributor profile",
+      "body": true,
+      "fields": [
+        {
+          "id": "github_url",
+          "label": "GitHub URL",
+          "type": "string",
+          "description": "Contributor's GitHub profile URL"
+        },
+        {
+          "id": "role",
+          "label": "Role",
+          "type": "string",
+          "description": "Contributor's role in the project"
+        },
+        {
+          "id": "photo",
+          "label": "Photo",
+          "type": "image",
+          "description": "Contributor's profile photo"
+        }
+      ]
+    },
+    {
+      "bundle": "release",
+      "label": "Release",
+      "description": "A versioned release of the open source project",
+      "body": true,
+      "fields": [
+        {
+          "id": "version",
+          "label": "Version",
+          "type": "string",
+          "description": "Semantic version number"
+        },
+        {
+          "id": "release_date",
+          "label": "Release Date",
+          "type": "datetime",
+          "description": "Date the release was published"
+        },
+        {
+          "id": "download_url",
+          "label": "Download URL",
+          "type": "string",
+          "description": "URL to download this release"
+        },
+        {
+          "id": "breaking_changes",
+          "label": "Breaking Changes",
+          "type": "bool",
+          "description": "Whether this release contains breaking changes"
+        }
+      ]
+    },
+    {
+      "bundle": "page",
+      "label": "Basic Page",
+      "description": "Static content pages for about, documentation, policies, etc.",
+      "body": true,
+      "fields": []
+    },
+    {
+      "entity": "paragraph",
+      "bundle": "feature_item",
+      "label": "Feature Item",
+      "description": "Individual feature highlight with icon, title, and description",
+      "fields": [
+        {
+          "id": "icon",
+          "label": "Icon",
+          "type": "string",
+          "description": "Icon name for the feature"
+        },
+        {
+          "id": "title",
+          "label": "Title",
+          "type": "string!",
+          "description": "Feature title (required)"
+        },
+        {
+          "id": "description",
+          "label": "Description",
+          "type": "text",
+          "description": "Detailed description of the feature"
+        }
+      ]
+    }
+  ],
+  "content": [
+    {
+      "id": "feature-modular",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Blocks",
+        "title": "Modular Architecture",
+        "description": "Build with composable plugins and extensions. Add only what you need and customize everything."
+      }
+    },
+    {
+      "id": "feature-community",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Users",
+        "title": "Community Driven",
+        "description": "Over 500 contributors worldwide. Every pull request is reviewed and every voice matters."
+      }
+    },
+    {
+      "id": "feature-secure",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "ShieldCheck",
+        "title": "Security First",
+        "description": "Regular security audits, automated vulnerability scanning, and responsible disclosure policy."
+      }
+    },
+    {
+      "id": "feature-performance",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Gauge",
+        "title": "Blazing Performance",
+        "description": "Optimized for speed with lazy loading, tree shaking, and zero-cost abstractions."
+      }
+    },
+    {
+      "id": "feature-docs",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "BookOpen",
+        "title": "Comprehensive Docs",
+        "description": "Detailed guides, API references, and tutorials to get you productive quickly."
+      }
+    },
+    {
+      "id": "feature-license",
+      "type": "paragraph.feature_item",
+      "values": {
+        "icon": "Scale",
+        "title": "MIT Licensed",
+        "description": "Use it freely in commercial and personal projects. No strings attached."
+      }
+    },
+    {
+      "id": "homepage",
+      "type": "node.homepage",
+      "path": "/homepage",
+      "values": {
+        "title": "OpenForge Project Homepage",
+        "hero_title": "Build the Future Together",
+        "hero_subtitle": "The OpenForge Project",
+        "hero_description": "<p>OpenForge is an open-source framework that empowers developers to create robust, scalable applications. Join thousands of contributors shaping the future of software.</p>",
+        "features_title": "Why OpenForge?",
+        "features_subtitle": "Built by developers, for developers. Every feature exists because the community needed it.",
+        "features_items": [
+          "@feature-modular",
+          "@feature-community",
+          "@feature-secure",
+          "@feature-performance",
+          "@feature-docs",
+          "@feature-license"
+        ],
+        "cta_title": "Ready to Contribute?",
+        "cta_description": "<p>Whether you're fixing a typo or building a new module, every contribution makes OpenForge better. Star us on GitHub and get started today.</p>",
+        "cta_primary": "Get Started",
+        "cta_secondary": "View on GitHub"
+      }
+    },
+    {
+      "id": "feature-plugin-system",
+      "type": "node.feature",
+      "path": "/features/plugin-system",
+      "values": {
+        "title": "Plugin System",
+        "body": "<p>OpenForge's plugin system allows you to extend core functionality without modifying the source code. Plugins hook into lifecycle events and can add routes, middleware, data transformations, and UI components.</p><h2>How It Works</h2><p>Plugins are standard npm packages that export a configuration object. The plugin loader handles dependency resolution, ordering, and conflict detection automatically.</p><h2>Creating a Plugin</h2><p>Use the CLI scaffolding tool to generate a plugin template with tests, documentation, and CI configuration pre-configured.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+          "alt": "Code editor showing plugin architecture",
+          "title": "Plugin System"
+        }
+      }
+    },
+    {
+      "id": "feature-cli-tools",
+      "type": "node.feature",
+      "path": "/features/cli-tools",
+      "values": {
+        "title": "CLI Developer Tools",
+        "body": "<p>The OpenForge CLI provides a powerful set of developer tools for scaffolding projects, generating components, running tests, and deploying applications.</p><h2>Key Commands</h2><ul><li><strong>forge init</strong> - Scaffold a new project with best practices</li><li><strong>forge generate</strong> - Create components, services, and plugins</li><li><strong>forge test</strong> - Run unit and integration tests</li><li><strong>forge deploy</strong> - Deploy to any cloud provider</li></ul>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=800&q=80",
+          "alt": "Terminal with CLI commands",
+          "title": "CLI Developer Tools"
+        }
+      }
+    },
+    {
+      "id": "feature-graphql-api",
+      "type": "node.feature",
+      "path": "/features/graphql-api",
+      "values": {
+        "title": "GraphQL API Layer",
+        "body": "<p>OpenForge includes a built-in GraphQL API layer that automatically generates schemas from your data models. Query exactly what you need with type safety and real-time subscriptions.</p><h2>Auto-Generated Schemas</h2><p>Define your models and OpenForge generates the full GraphQL schema including queries, mutations, and subscriptions.</p><h2>Playground Included</h2><p>An interactive GraphQL playground ships with every project for easy API exploration and testing.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80",
+          "alt": "GraphQL API visualization",
+          "title": "GraphQL API Layer"
+        }
+      }
+    },
+    {
+      "id": "feature-testing",
+      "type": "node.feature",
+      "path": "/features/testing-framework",
+      "values": {
+        "title": "Built-in Testing Framework",
+        "body": "<p>Ship with confidence using OpenForge's integrated testing framework. Unit tests, integration tests, and end-to-end tests are first-class citizens.</p><h2>Test Utilities</h2><p>Mock providers, fixture generators, and snapshot testing come out of the box. Write tests that are readable and maintainable.</p><h2>CI Integration</h2><p>Pre-configured GitHub Actions workflows run your entire test suite on every pull request.</p>",
+        "image": {
+          "uri": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+          "alt": "Testing code on a monitor",
+          "title": "Testing Framework"
+        }
+      }
+    },
+    {
+      "id": "contributor-sarah",
+      "type": "node.contributor",
+      "path": "/contributors/sarah-chen",
+      "values": {
+        "title": "Sarah Chen",
+        "body": "<p>Sarah is the original creator and lead maintainer of OpenForge. She started the project in 2021 while working on distributed systems at a major tech company. Her vision was to create a framework that makes complex architectures accessible to every developer.</p><p>She focuses on the core runtime, plugin system, and long-term architecture decisions. Sarah regularly speaks at conferences about open source sustainability and community building.</p>",
+        "github_url": "https://github.com/sarahchen",
+        "role": "Lead Maintainer",
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&q=80",
+          "alt": "Sarah Chen profile photo",
+          "title": "Sarah Chen"
+        }
+      }
+    },
+    {
+      "id": "contributor-marcus",
+      "type": "node.contributor",
+      "path": "/contributors/marcus-johnson",
+      "values": {
+        "title": "Marcus Johnson",
+        "body": "<p>Marcus leads the CLI tooling and developer experience efforts. Before contributing to OpenForge, he built developer tools at several startups and learned firsthand what makes a great development workflow.</p><p>His contributions include the scaffolding system, the interactive configuration wizard, and the hot-reload development server. Marcus also mentors new contributors through the onboarding program.</p>",
+        "github_url": "https://github.com/marcusj",
+        "role": "Core Contributor - DevEx",
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80",
+          "alt": "Marcus Johnson profile photo",
+          "title": "Marcus Johnson"
+        }
+      }
+    },
+    {
+      "id": "contributor-elena",
+      "type": "node.contributor",
+      "path": "/contributors/elena-rodriguez",
+      "values": {
+        "title": "Elena Rodriguez",
+        "body": "<p>Elena is the security lead for OpenForge. She conducts security audits, manages the vulnerability disclosure program, and ensures every release meets strict security standards.</p><p>With a background in application security and penetration testing, Elena has hardened the framework against common attack vectors and established automated security scanning in the CI pipeline.</p>",
+        "github_url": "https://github.com/elenarodriguez",
+        "role": "Security Lead",
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&q=80",
+          "alt": "Elena Rodriguez profile photo",
+          "title": "Elena Rodriguez"
+        }
+      }
+    },
+    {
+      "id": "contributor-akira",
+      "type": "node.contributor",
+      "path": "/contributors/akira-tanaka",
+      "values": {
+        "title": "Akira Tanaka",
+        "body": "<p>Akira maintains the documentation, tutorials, and learning resources for OpenForge. He believes that great documentation is just as important as great code.</p><p>He has written over 200 pages of guides, built the interactive tutorial system, and translates documentation into Japanese. Akira also manages the community Discord server and weekly office hours.</p>",
+        "github_url": "https://github.com/akiratanaka",
+        "role": "Documentation Lead",
+        "photo": {
+          "uri": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80",
+          "alt": "Akira Tanaka profile photo",
+          "title": "Akira Tanaka"
+        }
+      }
+    },
+    {
+      "id": "release-300",
+      "type": "node.release",
+      "path": "/releases/v3-0-0",
+      "values": {
+        "title": "OpenForge v3.0.0 - Catalyst",
+        "body": "<p>OpenForge v3.0.0 \"Catalyst\" is a major release introducing the new reactive state management system, improved plugin API, and a complete rewrite of the build pipeline.</p><h2>Highlights</h2><ul><li>New reactive state management with fine-grained reactivity</li><li>Plugin API v2 with lifecycle hooks and dependency injection</li><li>50% faster build times with the new bundler</li><li>TypeScript 5.3 support with decorator metadata</li></ul><h2>Migration Guide</h2><p>The migration guide covers all breaking changes and provides codemods for automated migration of most patterns.</p>",
+        "version": "3.0.0",
+        "release_date": "2025-12-15T00:00:00",
+        "download_url": "https://github.com/openforge/openforge/releases/tag/v3.0.0",
+        "breaking_changes": true
+      }
+    },
+    {
+      "id": "release-280",
+      "type": "node.release",
+      "path": "/releases/v2-8-0",
+      "values": {
+        "title": "OpenForge v2.8.0 - Steady State",
+        "body": "<p>Version 2.8.0 focuses on stability, performance improvements, and quality-of-life features requested by the community.</p><h2>What's New</h2><ul><li>Improved error messages with source location tracking</li><li>New debug panel for visualizing component trees</li><li>Reduced memory usage by 30% in large applications</li><li>Added support for streaming server-side rendering</li></ul>",
+        "version": "2.8.0",
+        "release_date": "2025-09-20T00:00:00",
+        "download_url": "https://github.com/openforge/openforge/releases/tag/v2.8.0",
+        "breaking_changes": false
+      }
+    },
+    {
+      "id": "release-270",
+      "type": "node.release",
+      "path": "/releases/v2-7-0",
+      "values": {
+        "title": "OpenForge v2.7.0 - Signal Boost",
+        "body": "<p>Version 2.7.0 introduces the signals API for fine-grained reactivity and adds first-class support for edge runtime deployments.</p><h2>Key Changes</h2><ul><li>Signals API for reactive primitives</li><li>Edge runtime adapter for Cloudflare Workers and Deno Deploy</li><li>New testing utilities for async operations</li><li>Improved TypeScript inference for plugin configurations</li></ul>",
+        "version": "2.7.0",
+        "release_date": "2025-06-10T00:00:00",
+        "download_url": "https://github.com/openforge/openforge/releases/tag/v2.7.0",
+        "breaking_changes": false
+      }
+    },
+    {
+      "id": "about-page",
+      "type": "node.page",
+      "path": "/about",
+      "values": {
+        "title": "About OpenForge",
+        "body": "<p>OpenForge is an open-source framework created in 2021 with the mission of making complex software architectures accessible to every developer. What started as a side project has grown into a thriving community of over 500 contributors from 40+ countries.</p><h2>Our Mission</h2><p>We believe that the best software is built in the open. Every line of code, every design decision, and every roadmap item is transparent and community-driven. We are committed to creating tools that are free, secure, and well-documented.</p><h2>Governance</h2><p>OpenForge is governed by a core team of elected maintainers and an advisory board. Major decisions are made through RFCs (Request for Comments) where any community member can participate.</p><h2>Sponsorship</h2><p>OpenForge is funded through GitHub Sponsors, Open Collective, and corporate sponsorships. All financial records are public and auditable.</p>"
+      }
+    },
+    {
+      "id": "contributing-page",
+      "type": "node.page",
+      "path": "/contributing",
+      "values": {
+        "title": "Contributing Guide",
+        "body": "<p>Thank you for your interest in contributing to OpenForge! We welcome contributions of all kinds: code, documentation, bug reports, feature requests, and community support.</p><h2>Getting Started</h2><ol><li>Fork the repository on GitHub</li><li>Clone your fork locally</li><li>Run <code>forge setup</code> to install dependencies</li><li>Create a feature branch from <code>main</code></li><li>Make your changes with tests</li><li>Submit a pull request</li></ol><h2>Code of Conduct</h2><p>We are committed to providing a welcoming and inclusive experience for everyone. Please read our Code of Conduct before participating.</p><h2>First-Time Contributors</h2><p>Look for issues labeled <code>good-first-issue</code> for beginner-friendly tasks. Our mentoring program pairs new contributors with experienced maintainers.</p>"
+      }
+    }
+  ]
+}

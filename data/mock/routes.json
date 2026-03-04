@@ -1,0 +1,539 @@
+{
+  "/homepage": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeHomepage",
+          "id": "homepage",
+          "title": "Welcome to NovaCMS",
+          "path": "/homepage",
+          "heroTitle": "The Open Source CMS for the Modern Web",
+          "heroSubtitle": "Fast. Flexible. Community-Driven.",
+          "heroDescription": {
+            "processed": "<p>NovaCMS is a headless content management system built for developers who demand performance, extensibility, and freedom. Ship faster with a CMS that gets out of your way.</p>",
+            "summary": "NovaCMS is a headless content management system built for developers who demand performance, extensibility, and freedom. Ship faster with a CMS that gets out of your way."
+          },
+          "statsItems": [
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-stars",
+              "title": "",
+              "number": "24K+",
+              "label": "GitHub Stars"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-contributors",
+              "title": "",
+              "number": "850+",
+              "label": "Contributors"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-downloads",
+              "title": "",
+              "number": "2.3M",
+              "label": "Monthly Downloads"
+            },
+            {
+              "__typename": "ParagraphStatItem",
+              "id": "stat-forks",
+              "title": "",
+              "number": "4,200+",
+              "label": "Forks"
+            }
+          ],
+          "featuredItemsTitle": "Why NovaCMS?",
+          "ctaTitle": "Ready to Build Something Great?",
+          "ctaDescription": {
+            "processed": "<p>Get started in minutes with our CLI installer, comprehensive documentation, and a thriving community of developers ready to help.</p>",
+            "summary": "Get started in minutes with our CLI installer, comprehensive documentation, and a thriving community of developers ready to help."
+          },
+          "ctaPrimary": "Get Started",
+          "ctaSecondary": "View on GitHub"
+        }
+      }
+    }
+  },
+  "/features/graphql-api": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeFeature",
+          "id": "feature-graphql",
+          "title": "GraphQL API",
+          "path": "/features/graphql-api",
+          "body": {
+            "processed": "<p>NovaCMS ships with a fully-featured GraphQL API out of the box. Query exactly the data you need with zero over-fetching, complete with real-time subscriptions, batched queries, and automatic schema generation from your content models.</p><h2>Key Capabilities</h2><ul><li>Auto-generated schema from content types</li><li>Real-time subscriptions via WebSockets</li><li>Query complexity analysis and rate limiting</li><li>Built-in playground for schema exploration</li></ul>",
+            "summary": "NovaCMS ships with a fully-featured GraphQL API out of the box. Query exactly the data you need with zero over-fetching, complete with real-time subscriptions, batched queries, and automatic schema ge"
+          },
+          "featureCategory": [
+            {
+              "id": "core",
+              "name": "core"
+            }
+          ],
+          "iconName": "api",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+            "alt": "GraphQL API code on a dark terminal",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "1.0.0"
+        }
+      }
+    }
+  },
+  "/features/plugin-system": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeFeature",
+          "id": "feature-plugins",
+          "title": "Plugin Architecture",
+          "path": "/features/plugin-system",
+          "body": {
+            "processed": "<p>Extend NovaCMS with a robust plugin system that lets you add custom fields, workflows, and integrations without modifying core code. Over 200 community plugins are available in the marketplace.</p><h2>Plugin Features</h2><ul><li>Hook-based lifecycle events</li><li>Custom field type registration</li><li>Admin UI extensions</li><li>Hot-reloading in development</li></ul>",
+            "summary": "Extend NovaCMS with a robust plugin system that lets you add custom fields, workflows, and integrations without modifying core code. Over 200 community plugins are available in the marketplace.Plugin "
+          },
+          "featureCategory": [
+            {
+              "id": "plugins",
+              "name": "plugins"
+            }
+          ],
+          "iconName": "puzzle",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+            "alt": "Circuit board representing modular plugin architecture",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "1.2.0"
+        }
+      }
+    }
+  },
+  "/features/edge-caching": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeFeature",
+          "id": "feature-performance",
+          "title": "Edge Caching & CDN",
+          "path": "/features/edge-caching",
+          "body": {
+            "processed": "<p>Built-in edge caching delivers content in under 50ms worldwide. NovaCMS integrates with all major CDN providers and includes intelligent cache invalidation that keeps your content fresh without sacrificing speed.</p><h2>Performance Highlights</h2><ul><li>Sub-50ms global response times</li><li>Automatic cache invalidation on content updates</li><li>Stale-while-revalidate support</li><li>Edge-side includes for partial caching</li></ul>",
+            "summary": "Built-in edge caching delivers content in under 50ms worldwide. NovaCMS integrates with all major CDN providers and includes intelligent cache invalidation that keeps your content fresh without sacrif"
+          },
+          "featureCategory": [
+            {
+              "id": "performance",
+              "name": "performance"
+            }
+          ],
+          "iconName": "bolt",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+            "alt": "Server room with glowing network connections",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "2.0.0"
+        }
+      }
+    }
+  },
+  "/features/authentication": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeFeature",
+          "id": "feature-auth",
+          "title": "Flexible Authentication",
+          "path": "/features/authentication",
+          "body": {
+            "processed": "<p>Support for OAuth 2.0, API keys, JWT tokens, and custom authentication providers. NovaCMS lets you secure your API however your team prefers, with granular role-based access control.</p><h2>Auth Options</h2><ul><li>OAuth 2.0 with PKCE flow</li><li>JWT with refresh tokens</li><li>API key management</li><li>RBAC with custom roles and permissions</li></ul>",
+            "summary": "Support for OAuth 2.0, API keys, JWT tokens, and custom authentication providers. NovaCMS lets you secure your API however your team prefers, with granular role-based access control.Auth OptionsOAuth "
+          },
+          "featureCategory": [
+            {
+              "id": "core",
+              "name": "core"
+            }
+          ],
+          "iconName": "shield",
+          "image": {
+            "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+            "alt": "Digital security lock concept",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=480&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=200&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          },
+          "versionAdded": "1.0.0"
+        }
+      }
+    }
+  },
+  "/contributors/elena-vasquez": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeContributor",
+          "id": "contributor-elena",
+          "title": "Elena Vasquez",
+          "path": "/contributors/elena-vasquez",
+          "body": {
+            "processed": "<p>Elena is the creator and lead maintainer of NovaCMS. She started the project in 2021 while working as a senior engineer at a digital agency, frustrated by the limitations of existing headless CMS options. Today she works full-time on NovaCMS, supported by the project's sponsors.</p>",
+            "summary": "Elena is the creator and lead maintainer of NovaCMS. She started the project in 2021 while working as a senior engineer at a digital agency, frustrated by the limitations of existing headless CMS opti"
+          },
+          "role": "Creator & Lead Maintainer",
+          "githubUsername": "evasquez",
+          "contributionsCount": 1842,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+            "alt": "Elena Vasquez",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "/contributors/kai-tanaka": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeContributor",
+          "id": "contributor-kai",
+          "title": "Kai Tanaka",
+          "path": "/contributors/kai-tanaka",
+          "body": {
+            "processed": "<p>Kai maintains the GraphQL engine and API layer of NovaCMS. With a background in distributed systems at major tech companies, Kai brings deep expertise in building high-performance APIs that scale to millions of requests per day.</p>",
+            "summary": "Kai maintains the GraphQL engine and API layer of NovaCMS. With a background in distributed systems at major tech companies, Kai brings deep expertise in building high-performance APIs that scale to m"
+          },
+          "role": "Core Maintainer - API",
+          "githubUsername": "ktanaka",
+          "contributionsCount": 967,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+            "alt": "Kai Tanaka",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "/contributors/amara-osei": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeContributor",
+          "id": "contributor-amara",
+          "title": "Amara Osei",
+          "path": "/contributors/amara-osei",
+          "body": {
+            "processed": "<p>Amara leads the documentation and developer experience efforts for NovaCMS. She has rewritten the project's documentation from scratch, created the interactive tutorial system, and manages the community Discord server with over 8,000 members.</p>",
+            "summary": "Amara leads the documentation and developer experience efforts for NovaCMS. She has rewritten the project's documentation from scratch, created the interactive tutorial system, and manages the communi"
+          },
+          "role": "Core Maintainer - DevEx & Docs",
+          "githubUsername": "amaraosei",
+          "contributionsCount": 534,
+          "photo": {
+            "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+            "alt": "Amara Osei",
+            "width": 800,
+            "height": 533,
+            "variations": [
+              {
+                "name": "LARGE",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 800,
+                "height": 533
+              },
+              {
+                "name": "MEDIUM",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 480,
+                "height": 320
+              },
+              {
+                "name": "THUMBNAIL",
+                "url": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+                "width": 200,
+                "height": 133
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "/releases/v3-0-0": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeRelease",
+          "id": "release-300",
+          "title": "NovaCMS v3.0.0 - Aurora",
+          "path": "/releases/v3-0-0",
+          "body": {
+            "processed": "<h2>Breaking Changes</h2><ul><li>Minimum Node.js version bumped to 20 LTS</li><li>Legacy REST API removed in favor of GraphQL</li><li>Config file format changed to YAML</li></ul><h2>New Features</h2><ul><li>Real-time collaboration for content editing</li><li>AI-powered content suggestions</li><li>Built-in image optimization pipeline</li><li>Multi-tenant workspace support</li></ul><h2>Improvements</h2><ul><li>50% reduction in cold start time</li><li>Redesigned admin dashboard</li><li>Improved TypeScript type generation</li></ul>",
+            "summary": "Breaking ChangesMinimum Node.js version bumped to 20 LTSLegacy REST API removed in favor of GraphQLConfig file format changed to YAMLNew FeaturesReal-time collaboration for content editingAI-powered c"
+          },
+          "versionNumber": "3.0.0",
+          "releaseDate": {
+            "timestamp": 1763222400
+          },
+          "releaseType": [
+            {
+              "id": "major",
+              "name": "major"
+            }
+          ],
+          "downloadUrl": "https://github.com/novacms/novacms/releases/tag/v3.0.0",
+          "isLatest": true
+        }
+      }
+    }
+  },
+  "/releases/v2-12-0": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeRelease",
+          "id": "release-212",
+          "title": "NovaCMS v2.12.0",
+          "path": "/releases/v2-12-0",
+          "body": {
+            "processed": "<h2>New Features</h2><ul><li>Webhook management UI</li><li>Content scheduling with timezone support</li><li>Bulk import/export via CLI</li></ul><h2>Bug Fixes</h2><ul><li>Fixed memory leak in long-running preview sessions</li><li>Corrected pagination cursor behavior on filtered queries</li><li>Resolved race condition in concurrent content updates</li></ul>",
+            "summary": "New FeaturesWebhook management UIContent scheduling with timezone supportBulk import/export via CLIBug FixesFixed memory leak in long-running preview sessionsCorrected pagination cursor behavior on fi"
+          },
+          "versionNumber": "2.12.0",
+          "releaseDate": {
+            "timestamp": 1758380400
+          },
+          "releaseType": [
+            {
+              "id": "minor",
+              "name": "minor"
+            }
+          ],
+          "downloadUrl": "https://github.com/novacms/novacms/releases/tag/v2.12.0",
+          "isLatest": false
+        }
+      }
+    }
+  },
+  "/releases/v2-11-3": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodeRelease",
+          "id": "release-2113",
+          "title": "NovaCMS v2.11.3",
+          "path": "/releases/v2-11-3",
+          "body": {
+            "processed": "<h2>Bug Fixes</h2><ul><li>Patched XSS vulnerability in rich text field sanitization</li><li>Fixed Docker image build failure on ARM64 architecture</li><li>Corrected OAuth token refresh timing issue</li></ul><h2>Security</h2><p>This release addresses CVE-2025-12345, a moderate-severity cross-site scripting vulnerability. All users on v2.11.x are encouraged to upgrade immediately.</p>",
+            "summary": "Bug FixesPatched XSS vulnerability in rich text field sanitizationFixed Docker image build failure on ARM64 architectureCorrected OAuth token refresh timing issueSecurityThis release addresses CVE-202"
+          },
+          "versionNumber": "2.11.3",
+          "releaseDate": {
+            "timestamp": 1754406000
+          },
+          "releaseType": [
+            {
+              "id": "patch",
+              "name": "patch"
+            }
+          ],
+          "downloadUrl": "https://github.com/novacms/novacms/releases/tag/v2.11.3",
+          "isLatest": false
+        }
+      }
+    }
+  },
+  "/about": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodePage",
+          "id": "page-about",
+          "title": "About NovaCMS",
+          "path": "/about",
+          "body": {
+            "processed": "<p>NovaCMS is an open source headless content management system licensed under the MIT License. The project was founded in 2021 with a simple goal: build the CMS that developers actually want to use.</p><h2>Our Mission</h2><p>We believe content management should be developer-friendly, blazing fast, and completely free from vendor lock-in. NovaCMS gives teams full ownership of their content infrastructure while providing the developer experience they deserve.</p><h2>Governance</h2><p>NovaCMS is governed by a Technical Steering Committee (TSC) of five elected maintainers. Major architectural decisions are made through an open RFC process, and all discussions happen in public on GitHub.</p><h2>Sponsors</h2><p>NovaCMS is sustained by the generous support of our sponsors, including corporate backers and individual contributors on GitHub Sponsors and Open Collective.</p>",
+            "summary": "NovaCMS is an open source headless content management system licensed under the MIT License. The project was founded in 2021 with a simple goal: build the CMS that developers actually want to use.Our "
+          }
+        }
+      }
+    }
+  },
+  "/documentation": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodePage",
+          "id": "page-docs",
+          "title": "Documentation",
+          "path": "/documentation",
+          "body": {
+            "processed": "<h2>Getting Started</h2><p>The fastest way to get started with NovaCMS is our CLI installer. Run the following command to create a new project:</p><p><code>npx create-novacms my-project</code></p><h2>Core Concepts</h2><ul><li><strong>Content Types</strong> - Define your content models with fields, validations, and relationships</li><li><strong>API Layer</strong> - Query content through the auto-generated GraphQL API</li><li><strong>Plugins</strong> - Extend functionality with community or custom plugins</li><li><strong>Webhooks</strong> - Trigger external services on content events</li></ul><h2>Community Resources</h2><ul><li>Discord Server - 8,000+ members</li><li>GitHub Discussions - Q&A and feature requests</li><li>YouTube Channel - Video tutorials and live streams</li></ul>",
+            "summary": "Getting StartedThe fastest way to get started with NovaCMS is our CLI installer. Run the following command to create a new project:npx create-novacms my-projectCore ConceptsContent Types - Define your"
+          }
+        }
+      }
+    }
+  },
+  "/contributing": {
+    "data": {
+      "route": {
+        "__typename": "RouteInternal",
+        "entity": {
+          "__typename": "NodePage",
+          "id": "page-contributing",
+          "title": "Contributing Guide",
+          "path": "/contributing",
+          "body": {
+            "processed": "<h2>How to Contribute</h2><p>NovaCMS welcomes contributions from developers of all experience levels. Whether you're fixing a typo in the docs or building a major feature, your help makes the project better for everyone.</p><h2>Types of Contributions</h2><ul><li><strong>Code</strong> - Bug fixes, features, and performance improvements</li><li><strong>Documentation</strong> - Guides, tutorials, and API reference improvements</li><li><strong>Community</strong> - Answering questions, reviewing PRs, and mentoring newcomers</li><li><strong>Design</strong> - UI/UX improvements to the admin dashboard</li></ul><h2>Development Setup</h2><p>Fork the repository, clone your fork, and run <code>npm install</code> followed by <code>npm run dev</code>. The project uses a monorepo structure managed with Turborepo.</p>",
+            "summary": "How to ContributeNovaCMS welcomes contributions from developers of all experience levels. Whether you're fixing a typo in the docs or building a major feature, your help makes the project better for e"
+          }
+        }
+      }
+    }
+  }
+}
