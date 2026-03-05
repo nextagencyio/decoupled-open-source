@@ -36,12 +36,12 @@ export default function Header() {
 
   return (
     <header
-      className="fixed w-full z-50 bg-white/80 backdrop-blur-sm"
+      className="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200"
       style={{ top: bannerHeight }}
     >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-heading text-lg tracking-tight text-gray-900 hover:text-accent-500 transition-colors">
+          <Link href="/" className="font-heading text-lg tracking-tight text-gray-900 hover:text-accent-600 transition-colors">
             OpenForge
           </Link>
 
@@ -50,20 +50,28 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm transition-colors ${
+                className={`text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? 'text-gray-900'
-                    : 'text-gray-400 hover:text-gray-900'
+                    ? 'text-accent-600'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-gray-900 hover:bg-gray-800 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+            >
+              Star on GitHub
+            </a>
           </nav>
 
           <button
             type="button"
-            className="md:hidden text-gray-400 hover:text-gray-900"
+            className="md:hidden text-gray-600 hover:text-gray-900"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Toggle menu</span>
@@ -78,10 +86,10 @@ export default function Header() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-2 text-sm transition-colors ${
+                className={`block py-2 text-sm font-medium transition-colors ${
                   isActive(item.href)
-                    ? 'text-gray-900'
-                    : 'text-gray-400 hover:text-gray-900'
+                    ? 'text-accent-600'
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {item.name}

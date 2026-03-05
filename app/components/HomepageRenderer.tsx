@@ -46,7 +46,7 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
         <section className="bg-[#f8fafc] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading text-2xl font-bold tracking-tight text-gray-950 mb-2">Features</h2>
-            <p className="text-gray-400 text-sm mb-8">Core capabilities that power your workflow</p>
+            <p className="text-gray-500 text-sm mb-8">Core capabilities that power your workflow</p>
             <div className="border-t border-gray-100 bg-white rounded-xl overflow-hidden shadow-sm">
               {features.slice(0, 6).map((item: any) => (
                 <FeatureCard key={item.id} item={item} />
@@ -77,7 +77,7 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
         <section className="bg-[#f8fafc] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading text-2xl font-bold tracking-tight text-gray-950 mb-2">Contributors</h2>
-            <p className="text-gray-400 text-sm mb-8">The people building OpenForge</p>
+            <p className="text-gray-500 text-sm mb-8">The people building OpenForge</p>
             <div className="border-t border-gray-100 bg-white rounded-xl overflow-hidden shadow-sm">
               {contributors.slice(0, 6).map((item: any) => (
                 <ContributorCard key={item.id} item={item} />
@@ -92,7 +92,7 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
         <section className="bg-[#f8fafc] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading text-2xl font-bold tracking-tight text-gray-950 mb-2">Releases</h2>
-            <p className="text-gray-400 text-sm mb-8">Latest versions and changelogs</p>
+            <p className="text-gray-500 text-sm mb-8">Latest versions and changelogs</p>
             <div className="border-t border-gray-100 bg-white rounded-xl overflow-hidden shadow-sm">
               {releases.slice(0, 4).map((item: any) => (
                 <ReleaseCard key={item.id} item={item} />
@@ -107,9 +107,9 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
       </ErrorBoundary>
 
       {/* Footer */}
-      <footer className="bg-white border-t border-gray-100">
+      <footer className="bg-white border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-300">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
             <span className="font-heading">&copy; {new Date().getFullYear()} OpenForge</span>
             <span className="mt-2 sm:mt-0">Released under the MIT License</span>
           </div>
