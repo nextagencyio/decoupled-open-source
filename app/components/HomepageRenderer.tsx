@@ -30,7 +30,7 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
   const releases = (homepageContent as any)?.featuredReleases?.nodes || (homepageContent as any)?.releases?.nodes || []
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f8fafc]">
       <Header />
 
       <ErrorBoundary>
@@ -43,11 +43,11 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
 
       {/* Features list */}
       {features.length > 0 && (
-        <section className="bg-white py-12">
+        <section className="bg-[#f8fafc] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading text-2xl font-bold tracking-tight text-gray-950 mb-2">Features</h2>
             <p className="text-gray-400 text-sm mb-8">Core capabilities that power your workflow</p>
-            <div className="border-t border-gray-100">
+            <div className="border-t border-gray-100 bg-white rounded-xl overflow-hidden shadow-sm">
               {features.slice(0, 6).map((item: any) => (
                 <FeatureCard key={item.id} item={item} />
               ))}
@@ -57,14 +57,14 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
       )}
 
       {/* Capabilities icons */}
-      <section className="bg-white py-12">
+      <section className="bg-primary-950 py-12 border-y border-primary-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-t border-gray-100 pt-8">
+          <div className="border-t border-primary-800 pt-8">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
               {capabilities.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex flex-col items-center text-center">
-                  <Icon className="w-6 h-6 text-gray-300 mb-2" strokeWidth={1.5} />
-                  <span className="text-xs text-gray-400">{label}</span>
+                  <Icon className="w-6 h-6 text-primary-300 mb-2" strokeWidth={1.5} />
+                  <span className="text-xs text-primary-200">{label}</span>
                 </div>
               ))}
             </div>
@@ -74,11 +74,11 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
 
       {/* Contributors list */}
       {contributors.length > 0 && (
-        <section className="bg-white py-12">
+        <section className="bg-[#f8fafc] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading text-2xl font-bold tracking-tight text-gray-950 mb-2">Contributors</h2>
             <p className="text-gray-400 text-sm mb-8">The people building OpenForge</p>
-            <div className="border-t border-gray-100">
+            <div className="border-t border-gray-100 bg-white rounded-xl overflow-hidden shadow-sm">
               {contributors.slice(0, 6).map((item: any) => (
                 <ContributorCard key={item.id} item={item} />
               ))}
@@ -89,11 +89,11 @@ export default function HomepageRenderer({ homepageContent }: HomepageRendererPr
 
       {/* Releases list */}
       {releases.length > 0 && (
-        <section className="bg-white py-12">
+        <section className="bg-[#f8fafc] py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="font-heading text-2xl font-bold tracking-tight text-gray-950 mb-2">Releases</h2>
             <p className="text-gray-400 text-sm mb-8">Latest versions and changelogs</p>
-            <div className="border-t border-gray-100">
+            <div className="border-t border-gray-100 bg-white rounded-xl overflow-hidden shadow-sm">
               {releases.slice(0, 4).map((item: any) => (
                 <ReleaseCard key={item.id} item={item} />
               ))}
