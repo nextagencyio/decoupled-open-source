@@ -19,28 +19,28 @@
               "__typename": "ParagraphStatItem",
               "id": "stat-stars",
               "title": "",
-              "number": "24K+",
+              "number": "24K+", "value": "24K+",
               "label": "GitHub Stars"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-contributors",
               "title": "",
-              "number": "850+",
+              "number": "850+", "value": "850+",
               "label": "Contributors"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-downloads",
               "title": "",
-              "number": "2.3M",
+              "number": "2.3M", "value": "2.3M",
               "label": "Monthly Downloads"
             },
             {
               "__typename": "ParagraphStatItem",
               "id": "stat-forks",
               "title": "",
-              "number": "4,200+",
+              "number": "4,200+", "value": "4,200+",
               "label": "Forks"
             }
           ],
