@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 async function getFeatures() {
   try {
     const client = getClient()
-    const { data } = await client.raw(GET_FEATURE_TEASERS, { first: 50 })
+    const data = await client.raw(GET_FEATURE_TEASERS, { first: 50 })
     return data?.nodeFeatures?.nodes || []
   } catch (error) {
     console.error('Error fetching features:', error)
@@ -55,7 +55,7 @@ export default async function FeaturesPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {items.map((item) => (
+              {items.map((item: any) => (
                 <FeatureCard key={item.id} item={item} />
               ))}
             </div>
