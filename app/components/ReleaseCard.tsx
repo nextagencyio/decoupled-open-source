@@ -17,8 +17,8 @@ export default function ReleaseCard({ item }: ReleaseCardProps) {
           <h3 className="font-heading text-lg font-semibold text-gray-900 group-hover:text-accent-500 transition-colors truncate">
             {item.title}
           </h3>
-          {(item as any).versionNumber && (
-            <span className="text-xs text-accent-500 font-heading hidden sm:inline">{(item as any).versionNumber}</span>
+          {(item as any).version && (
+            <span className="text-xs text-accent-500 font-heading hidden sm:inline">v{(item as any).version}</span>
           )}
         </div>
         {(item as any).body?.processed && (

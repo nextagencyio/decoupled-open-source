@@ -21,8 +21,8 @@ export default function ContributorCard({ item }: ContributorCardProps) {
             <span className="text-xs text-gray-300 hidden sm:inline">{(item as any).role}</span>
           )}
         </div>
-        {(item as any).githubUsername && (
-          <p className="text-sm text-gray-400 mt-1">@{(item as any).githubUsername}</p>
+        {(item as any).githubUrl && (
+          <p className="text-sm text-gray-400 mt-1">{(item as any).githubUrl}</p>
         )}
       </div>
       <ArrowRight className="w-4 h-4 text-gray-300 group-hover:text-accent-500 group-hover:translate-x-1 transition-all flex-shrink-0" />

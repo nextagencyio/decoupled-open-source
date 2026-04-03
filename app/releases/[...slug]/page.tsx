@@ -95,10 +95,10 @@ export default async function ReleaseDetailPage({ params }: PageProps) {
               <div className="bg-white rounded-xl shadow-sm p-6 sticky top-24">
                 <h3 className="text-lg font-bold text-gray-900 mb-4">Details</h3>
                 <dl className="space-y-4">
-                  {(item as any).versionNumber && (
+                  {(item as any).version && (
                     <div>
-                      <dt className="text-sm text-gray-500">Version Number</dt>
-                      <dd className="font-semibold text-gray-900">{(item as any).versionNumber}</dd>
+                      <dt className="text-sm text-gray-500">Version</dt>
+                      <dd className="font-semibold text-gray-900">{(item as any).version}</dd>
                     </div>
                   )}
                   {(item as any).downloadUrl && (

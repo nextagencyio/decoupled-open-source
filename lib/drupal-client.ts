@@ -88,7 +88,13 @@ export function getClient(): TypedClient {
           query ($path: String!) {
             route(path: $path) {
               ... on RouteInternal {
-                entity { ... on NodePage { __typename id title path body { processed } } }
+                entity {
+                  ... on NodePage { __typename id title path body { processed } }
+                  ... on NodeFeature { __typename id title path body { processed } image { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } } }
+                  ... on NodeContributor { __typename id title path body { processed } githubUrl role photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } } }
+                  ... on NodeRelease { __typename id title path body { processed } version releaseDate { timestamp } downloadUrl breakingChanges }
+                  ... on NodeHomepage { __typename id title path heroTitle heroSubtitle heroDescription { processed } featuresTitle featuresSubtitle ctaTitle ctaDescription { processed } ctaPrimary ctaSecondary }
+                }
               }
             }
           }

@@ -13,6 +13,9 @@ import { GitBranch, Code, Star, Users, GitPullRequest, Terminal } from 'lucide-r
 
 interface HomepageRendererProps {
   homepageContent: DrupalHomepage | null | undefined
+  features?: any[]
+  contributors?: any[]
+  releases?: any[]
 }
 
 const capabilities = [
@@ -24,10 +27,7 @@ const capabilities = [
   { icon: Terminal, label: 'CLI Tools' },
 ]
 
-export default function HomepageRenderer({ homepageContent }: HomepageRendererProps) {
-  const features = (homepageContent as any)?.featuredFeatures?.nodes || (homepageContent as any)?.features?.nodes || []
-  const contributors = (homepageContent as any)?.featuredContributors?.nodes || (homepageContent as any)?.contributors?.nodes || []
-  const releases = (homepageContent as any)?.featuredReleases?.nodes || (homepageContent as any)?.releases?.nodes || []
+export default function HomepageRenderer({ homepageContent, features = [], contributors = [], releases = [] }: HomepageRendererProps) {
 
   return (
     <div className="min-h-screen bg-[#f8fafc]">

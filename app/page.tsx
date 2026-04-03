@@ -4,6 +4,7 @@ import SetupGuide from './components/SetupGuide'
 import ContentSetupGuide from './components/ContentSetupGuide'
 import { Metadata } from 'next'
 import { checkConfiguration } from '../lib/config-check'
+import { GET_HOMEPAGE_DATA, GET_FEATURE_TEASERS, GET_CONTRIBUTORS, GET_RELEASES } from '@/lib/queries'
 
 export const revalidate = 3600
 export const dynamic = 'force-dynamic'
@@ -39,12 +40,35 @@ export default async function Home() {
   }
 
   const client = getClient()
-  const homepageContent = await client.getEntryByPath('/') as any
+  let homepageContent = null
+  let features: any[] = []
+  let contributors: any[] = []
+  let releases: any[] = []
+
+  try {
+    const [homepageData, featuresData, contributorsData, releasesData] = await Promise.all([
+      client.raw(GET_HOMEPAGE_DATA),
+      client.raw(GET_FEATURE_TEASERS, { first: 6 }),
+      client.raw(GET_CONTRIBUTORS, { first: 6 }),
+      client.raw(GET_RELEASES, { first: 4 }),
+    ])
+    homepageContent = homepageData?.nodeHomepages?.nodes?.[0] || null
+    features = featuresData?.nodeFeatures?.nodes || []
+    contributors = contributorsData?.nodeContributors?.nodes || []
+    releases = releasesData?.nodeReleases?.nodes || []
+  } catch (error) {
+    console.error('Error fetching homepage:', error)
+  }
 
   if (!homepageContent) {
     const drupalBaseUrl = process.env.NEXT_PUBLIC_DRUPAL_BASE_URL
     return <ContentSetupGuide drupalBaseUrl={drupalBaseUrl} />
   }
 
-  return <HomepageRenderer homepageContent={homepageContent} />
+  return <HomepageRenderer
+    homepageContent={homepageContent}
+    features={features}
+    contributors={contributors}
+    releases={releases}
+  />
 }

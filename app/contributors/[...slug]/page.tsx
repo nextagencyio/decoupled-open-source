@@ -112,10 +112,14 @@ export default async function ContributorDetailPage({ params }: PageProps) {
                       <dd className="font-semibold text-gray-900">{(item as any).role}</dd>
                     </div>
                   )}
-                  {(item as any).githubUsername && (
+                  {(item as any).githubUrl && (
                     <div>
-                      <dt className="text-sm text-gray-500">GitHub Username</dt>
-                      <dd className="font-semibold text-gray-900">{(item as any).githubUsername}</dd>
+                      <dt className="text-sm text-gray-500">GitHub</dt>
+                      <dd className="font-semibold text-gray-900">
+                        <a href={(item as any).githubUrl} target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:underline">
+                          {(item as any).githubUrl}
+                        </a>
+                      </dd>
                     </div>
                   )}
                 </dl>

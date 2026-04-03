@@ -46,11 +46,19 @@ export const GET_HOMEPAGE_DATA = gql`
         path
         heroTitle
         heroSubtitle
-        heroDescription { processed summary }
-        statsItems { ... on ParagraphStatItem { id title description { processed } icon } }
-        featuredItemsTitle
+        heroDescription { processed }
+        featuresTitle
+        featuresSubtitle
+        featuresItems {
+          ... on ParagraphFeatureItem {
+            id
+            title
+            description { processed }
+            icon
+          }
+        }
         ctaTitle
-        ctaDescription { processed summary }
+        ctaDescription { processed }
         ctaPrimary
         ctaSecondary
       }
@@ -161,8 +169,7 @@ export const GET_CONTRIBUTORS = gql`
         ... on NodeContributor {
           body { processed summary }
           role
-          githubUsername
-          contributionsCount
+          githubUrl
           photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
         }
       }
@@ -179,11 +186,10 @@ export const GET_CONTRIBUTOR_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          role
-          githubUsername
-          contributionsCount
-          photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
+            body { processed summary }
+            role
+            githubUrl
+            photo { url alt width height variations(styles: [LARGE, MEDIUM, THUMBNAIL]) { name url width height } }
           }
         }
       }
@@ -201,11 +207,10 @@ export const GET_RELEASES = gql`
         created { timestamp }
         ... on NodeRelease {
           body { processed summary }
-          versionNumber
+          version
           releaseDate { timestamp }
-          releaseType
           downloadUrl
-          isLatest
+          breakingChanges
         }
       }
     }
@@ -221,12 +226,11 @@ export const GET_RELEASE_BY_PATH = gql`
             id
             title
             path
-          body { processed summary }
-          versionNumber
-          releaseDate { timestamp }
-          releaseType
-          downloadUrl
-          isLatest
+            body { processed summary }
+            version
+            releaseDate { timestamp }
+            downloadUrl
+            breakingChanges
           }
         }
       }

@@ -54,6 +54,7 @@ export interface FeatureTeaserData {
 export interface DrupalContributor extends DrupalNode {
   body?: {
     processed: string
+    summary?: string
   }
   githubUrl?: string
   role?: string
@@ -80,6 +81,7 @@ export interface ContributorData {
 export interface DrupalRelease extends DrupalNode {
   body?: {
     processed: string
+    summary?: string
   }
   version?: string
   releaseDate?: {
@@ -101,7 +103,10 @@ export interface DrupalPage extends DrupalNode {
   }
 }
 
-export interface DrupalHomepage extends DrupalNode {
+export interface DrupalHomepage {
+  id: string
+  title: string
+  path?: string
   heroTitle?: string
   heroSubtitle?: string
   heroDescription?: {
